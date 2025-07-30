@@ -2,9 +2,9 @@
 
 require_once '../../vendor/autoload.php';
 
-$crud = new \App\Crud();
+$dal = new \App\Dal();
 
-$result = $crud->delete(
+$result = $dal->delete(
     'users',
     'id=?',
     [ 56 ]
@@ -13,7 +13,7 @@ $result = $crud->delete(
 echo '<pre>';
 var_dump(
     $result,
-    $crud->data(),
-    $crud->fail()
+    $dal->data(),
+    $dal->fail()
 );
 echo '</pre>';

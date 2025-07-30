@@ -5,7 +5,7 @@ namespace App;
 use PDOException;
 use PDOStatement;
 
-class Crud
+class Dal
 {
     /**
      * @var PDOStatement $crud

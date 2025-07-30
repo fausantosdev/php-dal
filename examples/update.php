@@ -2,9 +2,9 @@
 
 require_once '../../vendor/autoload.php';
 
-$crud = new \App\Crud();
+$dal = new \App\Dal();
 
-$result = $crud->update(
+$result = $dal->update(
     'users',
     'document=?',// Se adicionar mais campos, separar por vírgula
     'id=?',// Condição
@@ -17,7 +17,7 @@ $result = $crud->update(
 echo '<pre>';
 var_dump(
     $result,
-    $crud->data(),
-    $crud->fail()
+    $dal->data(),
+    $dal->fail()
 );
 echo '</pre>';

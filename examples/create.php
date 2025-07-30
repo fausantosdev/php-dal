@@ -2,9 +2,9 @@
 
 require_once '../../vendor/autoload.php';
 
-$crud = new \App\Crud();
+$dal = new \App\Dal();
 
-$result = $crud->insert(
+$result = $dal->insert(
     'users',
     'default,?,?,?,default,?,default,default,default,default,default',
     [
@@ -18,7 +18,7 @@ $result = $crud->insert(
 echo '<pre>';
 var_dump(
     $result,
-    $crud->data(),
-    $crud->fail()
+    $dal->data(),
+    $dal->fail()
 );
 echo '</pre>';

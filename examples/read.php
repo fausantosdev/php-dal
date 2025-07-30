@@ -1,11 +1,9 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use \App\Crud;
+$dal = new \App\Dal();
 
-$crud = new Crud();
-
-$result = $crud->select(
+$result = $dal->select(
     '*',
     'users',
     '', // WHERE email = ?
@@ -15,7 +13,7 @@ $result = $crud->select(
 echo '<pre>';
 var_dump(
     $result,      // Retorna true ou false
-    $crud->data(),// Retorna o resultado da consulta
-    $crud->fail() // Retorna os erros
+    $dal->data(),// Retorna o resultado da consulta
+    $dal->fail() // Retorna os erros
 );
 echo '</pre>';
