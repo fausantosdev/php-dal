@@ -1,11 +1,11 @@
 {
-    "name": "fausantosdev/php-crud",
-    "description": "Crud s\u0000mples em PHP utilizando PDO ou mysqli",
+    "name": "fausantosdev/php-dal",
+    "description": "Simple database access layer in PHP using PDO",
     "license": "MIT",
     "authors": [
         {
-            "name": "fallsantos",
-            "email": "fallsantosdev@hotmail.com"
+            "name": "fausantosedv",
+            "email": "fausantosdev@hotmail.com"
         }
     ],
     "minimum-stability": "dev",
