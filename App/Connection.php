@@ -1,6 +1,6 @@
 <?php
 
-namespace PDOConnection\App;
+namespace App;
 
 use PDO;
 use PDOException;
@@ -10,7 +10,7 @@ class Connection
     // Membros somente da classe para que nunca tenha um novo objeto instanciando a conexão
     private static string $driver = 'mysql';
     private static string $host = 'localhost';
-    private static string $database = 'fullstasckphp';
+    private static string $database = 'fullstackphp';
     private static string $user = 'root';
     private static string $password = '';
     private static array $option = [

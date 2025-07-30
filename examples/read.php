@@ -1,7 +1,7 @@
 <?php
-require_once '../../vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
-use PDOConnection\App\Crud;
+use \App\Crud;
 
 $crud = new Crud();
 

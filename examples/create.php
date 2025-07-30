@@ -2,7 +2,7 @@
 
 require_once '../../vendor/autoload.php';
 
-$crud = new \PDOConnection\App\Crud();
+$crud = new \App\Crud();
 
 $result = $crud->insert(
     'users',
