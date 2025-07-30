@@ -7,13 +7,13 @@ $crud = new \PDOConnection\App\Crud();
 $result = $crud->delete(
     'users',
     'id=?',
-    [ 2 ]
+    [ 56 ]
 );
 
 echo '<pre>';
 var_dump(
-    $result,      // Result: true or false
-    $crud->data(),// Data
-    $crud->fail() // Error array
+    $result,
+    $crud->data(),
+    $crud->fail()
 );
 echo '</pre>';

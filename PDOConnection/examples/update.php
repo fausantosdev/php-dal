@@ -6,19 +6,18 @@ $crud = new \PDOConnection\App\Crud();
 
 $result = $crud->update(
     'users',
-    'name=?, email=?',
-    'id=?',
+    'document=?',// Se adicionar mais campos, separar por vírgula
+    'id=?',// Condição
     [
-        'Fulano Beltrano',
-        'fulanobeltrano@gmail.com',
-        2
+        '123456789',
+        56
     ]
 );
 
 echo '<pre>';
 var_dump(
-    $result,      // Result: true or false
-    $crud->data(),// Data
-    $crud->fail() // Error array
+    $result,
+    $crud->data(),
+    $crud->fail()
 );
 echo '</pre>';

@@ -1,8 +1,9 @@
 <?php
-
 require_once '../../vendor/autoload.php';
 
-$crud = new \PDOConnection\App\Crud();
+use PDOConnection\App\Crud;
+
+$crud = new Crud();
 
 $result = $crud->select(
     '*',
@@ -13,8 +14,8 @@ $result = $crud->select(
 
 echo '<pre>';
 var_dump(
-    $result,      // Result: true or false
-    $crud->data(),// Data
-    $crud->fail() // Error array
+    $result,      // Retorna true ou false
+    $crud->data(),// Retorna o resultado da consulta
+    $crud->fail() // Retorna os erros
 );
 echo '</pre>';
