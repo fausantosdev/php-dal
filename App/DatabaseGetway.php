@@ -119,7 +119,7 @@ class DatabaseGetway
    * @param array $params
    * @return bool
    */
-  protected function insert(string $table, string $values, array $params = []): bool
+  public function insert(string $table, string $values, array $params = []): bool
   {
     try {
       $this->preparedStatements("INSERT INTO {$table} VALUES({$values})", $params);
@@ -143,7 +143,7 @@ class DatabaseGetway
    * @param array $params
    * @return bool
    */
-  protected function select(string $fields, string $table, string $condition, array $params = []): bool
+  public function select(string $fields, string $table, string $condition, array $params = []): bool
   {
     try {
       $this->preparedStatements("SELECT {$fields} FROM {$table} {$condition}", $params);
@@ -164,7 +164,7 @@ class DatabaseGetway
    * @param array $params
    * @return bool
    */
-  protected function update(string $table, string $set, string $condition, array $params = []): bool
+  public function update(string $table, string $set, string $condition, array $params = []): bool
   {
     try {
       $this->preparedStatements("UPDATE {$table} SET {$set} WHERE {$condition}", $params);
@@ -184,7 +184,7 @@ class DatabaseGetway
    * @param array $params
    * @return bool
    */
-  protected function delete(string $table, string $condition, array $params = []): bool
+  public function delete(string $table, string $condition, array $params = []): bool
   {
     try {
       $this->preparedStatements("DELETE FROM {$table} WHERE {$condition}", $params);
