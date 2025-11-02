@@ -1,12 +1,12 @@
 <?php
 
-require_once '../../vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
-$dal = new \App\Dal();
+$dbg = new \App\DatabaseGetway();
 
-$result = $dal->insert(
+$result = $dbg->insert(
     'users',
-    'default,?,?,?,default,?,default,default,default,default,default',
+    'default,?,?,?,?,default,default,default,default,default,default,default,default',
     [
         'John',
         'Doe',
@@ -18,7 +18,7 @@ $result = $dal->insert(
 echo '<pre>';
 var_dump(
     $result,
-    $dal->data(),
-    $dal->fail()
+    $dbg->data(),
+    $dbg->fail()
 );
 echo '</pre>';

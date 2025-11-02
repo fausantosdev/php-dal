@@ -1,10 +1,10 @@
 <?php
 
-require_once '../../vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
-$dal = new \App\Dal();
+$dbg = new \App\DatabaseGetway();
 
-$result = $dal->update(
+$result = $dbg->update(
     'users',
     'document=?',// Se adicionar mais campos, separar por vírgula
     'id=?',// Condição
@@ -17,7 +17,7 @@ $result = $dal->update(
 echo '<pre>';
 var_dump(
     $result,
-    $dal->data(),
-    $dal->fail()
+    $dbg->data(),
+    $dbg->fail()
 );
 echo '</pre>';

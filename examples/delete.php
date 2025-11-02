@@ -1,8 +1,8 @@
 <?php
 
-require_once '../../vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
-$dal = new \App\Dal();
+$dal = new \App\DatabaseGetWay();
 
 $result = $dal->delete(
     'users',

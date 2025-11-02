@@ -1,19 +1,19 @@
 <?php
 require_once '../vendor/autoload.php';
 
-$dal = new \App\Dal();
+$dbg = new \App\DatabaseGetway();
 
-$result = $dal->select(
+$result = $dbg->select(
     '*',
     'users',
-    '', // WHERE email = ?
+    'ORDER BY id DESC LIMIT 3', // WHERE email = ?
      [] // [ 'fallsantosdev@hotmail.com' ]
 );
 
 echo '<pre>';
 var_dump(
-    $result,      // Retorna true ou false
-    $dal->data(),// Retorna o resultado da consulta
-    $dal->fail() // Retorna os erros
+    $result,     // Retorna true ou false
+    $dbg->data(),// Retorna o resultado da consulta
+    $dbg->fail() // Retorna os erros
 );
 echo '</pre>';
