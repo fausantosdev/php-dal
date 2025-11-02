@@ -21,7 +21,7 @@ final class Connection
   ];
 
   /**
-   * Armazena o objeto PDO
+   * Armaena o objeto PDO
    * @var PDO|null
    */
   private static ?PDO $instance = null;
@@ -47,8 +47,7 @@ final class Connection
         self::$option
         );
       }catch (PDOException $exception){
-        self::$error = $exception; // Armazena o erro
-        return null; // Retorna nulo se houver erro
+        redirect('/error/problemas');
       }
     }
 
